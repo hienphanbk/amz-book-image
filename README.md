@@ -46,8 +46,14 @@ GET /book-image?book_url=https://www.amazon.com/dp/B00BD1Q0IQ
 ### Using Docker (Recommended)
 
 1. Clone the repository
-2. Configure environment variables in `.env` file
-3. Build and run with Docker Compose:
+1. Configure environment variables by copying the example file and modifying as needed:
+
+```bash
+cp .env.example .env
+# Edit .env file with your preferred settings
+```
+
+1. Build and run with Docker Compose:
 
 ```bash
 docker compose up -d
@@ -69,8 +75,14 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-1. Configure environment variables in `.env` file
-2. Run the application:
+1. Configure environment variables by copying the example file and modifying as needed:
+
+```bash
+cp .env.example .env
+# Edit .env file with your preferred settings
+```
+
+1. Run the application:
 
 ```bash
 gunicorn wsgi:app --bind 0.0.0.0:8080 --workers 2 --timeout 60
